@@ -1,13 +1,12 @@
 import Navbar from "./components/navbar";
-import Home from "./pages/home";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div>
-        <Navbar />
-        <Home />
-      </div>
+      <Navbar />
+      <Outlet />
     </>
   );
 }
