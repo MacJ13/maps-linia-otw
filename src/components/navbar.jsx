@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => (
   <nav id="navbar">
     <ul id="navbar-list">
-      <a href="#">Główna</a>
-      <a href="#">Mapa</a>
+      <li>
+        <Link to="/">Główna</Link>
+      </li>
+      <li>
+        <Link to="map">Mapa</Link>
+      </li>
+
       <a href="#">O Projekcie</a>
       <a href="#">Miejsca</a>
       <a href="#">Kontakt</a>

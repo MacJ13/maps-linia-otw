@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const ornament = (
   <svg
     viewBox="0 0 119.63053 66.910011"
     version="1.1"
     id="svg1"
-    xml:space="preserve"
+    xmlSpace="preserve"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
   >
@@ -42,7 +44,9 @@ const Home = () => {
           różnych miejsc oraz obiektów znajdujących się na terenie linii
           otwockiej, a także jej okolicach.
         </p>
-        <a className="map-link">przejdź do mapy</a>
+        <Link to="map" className="map-link">
+          przejdź do mapy
+        </Link>
       </div>
     </div>
   );
