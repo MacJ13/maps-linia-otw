@@ -1,7 +1,11 @@
+import Home from "./pages/home";
+
 function App() {
   return (
     <>
-      <div>Map - linia otwocks</div>
+      <div>
+        <Home />
+      </div>
     </>
   );
 }
