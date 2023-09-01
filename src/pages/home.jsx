@@ -34,7 +34,7 @@ const ornament = (
 
 const Home = () => {
   return (
-    <div id="landing-page">
+    <div id="landing-page" className="frame">
       <div className="ornament left">{ornament}</div>
       <div className="ornament right">{ornament}</div>
       <div className="intro">

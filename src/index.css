@@ -38,7 +38,12 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #8dc26f;
+  /* color: #8dc26f; */
+  color: #afdead;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #landing-page {
@@ -46,7 +51,7 @@ a:hover {
   display: flex;
   height: 30rem;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 3.5rem);
   position: relative;
   width: 100%;
 
@@ -55,8 +60,6 @@ a:hover {
   background-position: center;
 
   z-index: 0;
-
-  border: 1rem solid rgba(255, 255, 255, 0.85);
 }
 
 #landing-page::after {
@@ -73,10 +76,14 @@ a:hover {
 }
 
 #navbar {
-  position: absolute;
-  top: 1rem;
+  background-color: black;
+  height: 3.5rem;
+  /* left: 1rem; */
+  position: relative;
+  /* top: 1rem; */
 
-  width: 100%;
+  /* width: calc(100% - 2rem); */
+
   z-index: 5;
 }
 
@@ -86,9 +93,68 @@ a:hover {
   font-weight: 500;
   justify-content: center;
   gap: 4rem;
+  height: 100%;
   letter-spacing: 2px;
   padding: 1rem 0;
+
   text-transform: uppercase;
+}
+
+#navbar a.active {
+  color: #8dc26f;
+}
+
+#navbar a.pending {
+  color: #76b852;
+}
+
+#map {
+  position: relative;
+
+  width: 100%;
+  /* overflow: hidden; */
+  z-index: 0;
+}
+
+#map-box {
+  display: grid;
+  min-height: calc(100vh - 5.5rem);
+  height: 35rem;
+  width: 100%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+}
+
+#map-options {
+  grid-column: 1 / 3;
+  height: 3rem;
+  font-size: 1.4rem;
+  background-color: #76b852;
+  width: 100%;
+  color: #fff;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#map-detail {
+  grid-column: 1;
+  grid-row: 2 span;
+  font-size: 1.2rem;
+  background-color: #afdead;
+  color: #fff;
+
+  text-align: center;
+  padding: 2rem;
+}
+
+.frame {
+  border: 1rem solid rgba(255, 255, 255, 0.85);
+}
+
+.map-wrapper {
+  height: 100%;
+  width: 100%;
 }
 
 .intro {
@@ -125,12 +191,14 @@ a:hover {
   padding: 1rem 0;
   text-align: center;
   text-transform: uppercase;
+  opacity: 0.9;
 
   width: 20rem;
 }
 
 .map-link:hover {
   color: #ecfdf5;
+  opacity: 1;
 }
 
 .ornament {
