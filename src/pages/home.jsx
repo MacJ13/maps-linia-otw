@@ -37,6 +37,8 @@ const Home = () => {
     <div id="landing-page" className="frame">
       <div className="ornament left">{ornament}</div>
       <div className="ornament right">{ornament}</div>
+      <div className="ornament top-left">{ornament}</div>
+      <div className="ornament top-right">{ornament}</div>
       <div className="intro">
         <h1 className="h1"> Mapy - Linia Otwocka</h1>
         <p className="paragraph">

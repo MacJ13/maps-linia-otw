@@ -110,10 +110,9 @@ ul {
 
 #map {
   position: relative;
-
+  min-height: 100vh;
   width: 100%;
   /* overflow: hidden; */
-  z-index: 0;
 }
 
 #map-box {
@@ -148,8 +147,16 @@ ul {
   padding: 2rem;
 }
 
+#map-content {
+  position: relative;
+  grid-column: 2;
+  grid-row: 2 span;
+  height: 100%;
+  width: 100%;
+}
+
 .frame {
-  border: 1rem solid rgba(255, 255, 255, 0.85);
+  border: 1rem solid rgba(255, 255, 255, 0.8);
 }
 
 .map-wrapper {
@@ -203,21 +210,39 @@ ul {
 
 .ornament {
   position: absolute;
-  bottom: -1px;
+
   transform: rotate(180deg);
 }
 
 .ornament.left {
+  bottom: -1px;
   right: -1px;
 }
 .ornament.right {
+  bottom: -1px;
   transform: scaleY(-1);
   left: -1px;
 }
+.ornament.top-left {
+  top: -1px;
+  right: -1px;
+  transform: scaleX(-1);
+}
+.ornament.top-right {
+  top: -1px;
+  left: -1px;
+  transform: rotate(0deg);
+}
 
 .ornament > svg {
-  width: 17.5rem;
-  fill: rgb(255, 255, 255, 0.85);
+  width: 13.5rem;
+  fill: rgba(255, 255, 255, 0.85);
+}
+
+@supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+  img.leaflet-tile {
+    mix-blend-mode: plus-lighter;
+  }
 }
 
 /* body {
